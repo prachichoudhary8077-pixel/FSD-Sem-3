@@ -1,0 +1,146 @@
+// html
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE-DS Student Record</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>CSE-DS Student Data</h2>
+
+    <input type="text" id="roll" placeholder="Roll Number">
+    <input type="text" id="name" placeholder="Student Name">
+    <input type="text" id="branch" placeholder="Branch">
+
+    <button onclick="saveData()">Save</button>
+    <button onclick="showData()">Retrieve</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Branch</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html> -->
+
+// css
+<!-- body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+}
+
+.container{
+    width:500px;
+    margin:40px auto;
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 10px gray;
+}
+
+h2{
+    text-align:center;
+}
+
+input{
+    width:95%;
+    padding:10px;
+    margin:8px 0;
+}
+
+button{
+    padding:10px 15px;
+    margin:10px 5px;
+    cursor:pointer;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table,th,td{
+    border:1px solid black;
+}
+
+th,td{
+    padding:10px;
+    text-align:center;
+} -->
+
+// js
+<!-- function saveData() {
+
+    let roll = document.getElementById("roll").value;
+    let name = document.getElementById("name").value;
+    let branch = document.getElementById("branch").value;
+
+    if(roll=="" || name=="" || branch==""){
+        alert("Fill all fields");
+        return;
+    }
+
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+
+    students.push({
+        roll: roll,
+        name: name,
+        branch: branch
+    });
+
+    localStorage.setItem("students", JSON.stringify(students));
+
+    alert("Data Saved");
+
+    document.getElementById("roll").value="";
+    document.getElementById("name").value="";
+    document.getElementById("branch").value="";
+}
+
+function showData(){
+
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+
+    let table = document.getElementById("tableBody");
+    table.innerHTML="";
+
+    students.forEach((student,index)=>{
+
+        table.innerHTML += `
+        <tr>
+            <td>${student.roll}</td>
+            <td>${student.name}</td>
+            <td>${student.branch}</td>
+            <td>
+                <button onclick="deleteData(${index})">Delete</button>
+            </td>
+        </tr>
+        `;
+    }); -->
+
+<!-- }
+
+function deleteData(index){
+
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+
+    students.splice(index,1);
+
+    localStorage.setItem("students",JSON.stringify(students));
+
+    showData();
+} -->
