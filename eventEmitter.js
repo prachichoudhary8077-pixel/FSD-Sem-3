@@ -1,20 +1,29 @@
-// exp 1 (half part)
-// node js
-const EventEmitter = require('events');  // EventEmitter-> class
-const myEmitter = new EventEmitter();  // myEmitter-> object
-myEmitter.on('greet', (name) => {  // on-> listener
+// Exp 1
+// Step 1: Module ko sirf ek baar top par import karein
+const EventEmitter = require('events');
+
+// --- PART 1: Custom EventEmitter ('greet' aur 'exit') ---
+const myEmitter = new EventEmitter();
+
+myEmitter.on('greet', (name) => {
     console.log(`Hello, ${name}! Welcome to ABES Engineering College`);
 });
-myEmitter.on('exit',()=>{
+
+myEmitter.on('exit', () => {
     console.log("Application Closed.");
 });
-myEmitter.emit('greet','2nd Year');  // emit -> trigger
+
+myEmitter.emit('greet', '2nd Year, Prachi Choudhary');
 myEmitter.emit('exit');
 
-// half
-class DOMElement extends EventEmitter{
-    constructor(name){
-        super();
-        this.name = name;
-    }
-}
+
+// --- PART 2: DOM-like Event Handling (Button Class) ---
+class Button extends EventEmitter {}
+
+const button = new Button();
+
+button.on('click', () => console.log('Button Clicked'));
+button.on('mouseover', () => console.log('Mouse is over the button.'));
+
+button.emit('click');
+button.emit('mouseover');
