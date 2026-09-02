@@ -1,0 +1,35 @@
+// STUDENT INFORMATION SYSTEM
+// ***by giving value already***
+// function multiply(a,b){
+//     return a*b;
+// }
+// let result = multiply(3,4);
+// console.log(result);
+
+
+// by taking value from user
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Program</title>
+</head>
+<body>
+    <h1>Multiplication of Two Numbers</h1>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <br>
+    <button onclick="multiply()">Multiply</button>
+    <h2 id="result"></h2>
+    <script>
+        function multiply() {
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            let result = num1 * num2;
+            document.getElementById("result").innerHTML =
+                "Multiplication = " + result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+// onclick,dblclick,contentmenu, onmousedown,onmouseup,onmouseout,onmouseup
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+    <style>
+        #box{
+            height:300px;
+            width:300px;
+            background-color: blueviolet;
+            margin: 200px 0 0 100px;
+            border:2px solid red;
+        }
+    </style>
+     <script>
+        function eventcall(){
+            alert('These are the mouse event')
+        }
+        function hi(){
+            alert('the mouse event')
+        }
+        function D(){
+            alert('the mouse event')
+        }
+        function E(){
+            alert('the event')
+        }
+    </script>
+</head>
+<body>
+    <div id="box" onclick="eventcall()">This is section A</div>
+    <div id="box" ondblclick="hi()">FSD</div>
+    <div id="box" oncontextmenu="D()">hello</div>
+    <div id="box" onmouseup="eventcall()">do </div>
+    <div id="box" onmousedown="E()">the</div>
+    <!-- <p id="para" onmouseover="eventcall()">yuwcnk</p> -->
+   
+</body>
+</html>
