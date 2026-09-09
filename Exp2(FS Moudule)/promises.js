@@ -23,3 +23,36 @@ async function readFile(){
 readFile();
 
 // update 
+async function appendFile(){
+    try{
+        await fs.appendFile("promises.txt", "\n Welcome to FSD Training.");
+        console.log("Data appended successfully");
+    } catch(error){
+        console.log("error: ", error);
+    }
+}
+appendFile();
+
+// rename 
+async function renameFile() {
+    try {
+        // syntax: fs.rename("old_name.txt", "new_name.txt")
+        await fs.rename("promises.txt", "renamed_promises.txt");
+        console.log("File renamed successfully!");
+    } catch (error) {
+        console.log("Error renaming file:", error);
+    }
+}
+renameFile();
+
+// delete
+async function deleteFile() {
+    try {
+        // syntax: fs.unlink("file_path")
+        await fs.unlink("promisesStudent.txt");
+        console.log("File deleted successfully!");
+    } catch (error) {
+        console.log("Error deleting file:", error);
+    }
+}
+deleteFile();
