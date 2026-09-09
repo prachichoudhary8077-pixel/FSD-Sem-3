@@ -9,3 +9,17 @@ async function writeFile(){
     }
 }
 writeFile();
+
+// read
+async function readFile(){
+    try{
+        const data = await fs.readFile("promises.txt","utf8");
+        console.log("file content");
+        console.log(data);
+    } catch(error){
+        console.log("error: ",error);
+    }
+}
+readFile();
+
+// update 
